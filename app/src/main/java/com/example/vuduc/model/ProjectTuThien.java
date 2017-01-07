@@ -8,6 +8,7 @@ import java.util.Date;
  */
 
 public class ProjectTuThien {
+    private String id;
     private String title;
     private String content;
     private String creator;
