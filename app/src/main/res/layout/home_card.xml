@@ -3,19 +3,5 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imgHomeCard"
-        android:layout_width="match_parent"
-        android:layout_height="160dp" />
 
-    <TextView
-        android:id="@+id/txtHomeCard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:text="text"
-        android:textSize="22sp"
-        android:gravity="center" />
 </LinearLayout>
