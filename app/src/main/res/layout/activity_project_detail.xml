@@ -176,6 +176,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Hình ảnh:"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/viduProject2"
+            android:id="@+id/imageView3" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
@@ -183,8 +205,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Mời tài trợ"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textSize="18sp" />
     </LinearLayout>
 
 </LinearLayout>
