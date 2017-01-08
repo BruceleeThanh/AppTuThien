@@ -1,0 +1,64 @@
+package com.example.vuduc.adapters;
+
+import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.vuduc.apptuthien.ListProjectActivity;
+import com.example.vuduc.apptuthien.ProjectDetailActivity;
+import com.example.vuduc.apptuthien.R;
+
+/**
+ * Created by Brucelee Thanh on 08/01/2017.
+ */
+
+public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHolder>{
+
+    private Context rootContext;
+
+    public MainMenuAdapter(Context context){
+        rootContext = context;
+    }
+
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu, parent, false);
+        ViewHolder viewHolder = new ViewHolder(view);
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(final ViewHolder holder, int position) {
+        holder.cvMainMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rootContext.startActivity(new Intent(rootContext, ListProjectActivity.class));
+            }
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return 10;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        CardView cvMainMenu;
+        ImageView ivMenuImage;
+        TextView tvMenuTitle;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            cvMainMenu = (CardView) itemView.findViewById(R.id.cvMainMenu);
+            ivMenuImage = (ImageView) itemView.findViewById(R.id.ivMenuImage);
+            tvMenuTitle = (TextView) itemView.findViewById(R.id.tvMenuTitle);
+        }
+    }
+}
