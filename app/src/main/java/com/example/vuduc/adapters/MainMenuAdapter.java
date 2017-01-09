@@ -13,6 +13,9 @@ import android.widget.TextView;
 import com.example.vuduc.apptuthien.ListProjectActivity;
 import com.example.vuduc.apptuthien.ProjectDetailActivity;
 import com.example.vuduc.apptuthien.R;
+import com.example.vuduc.model.HomeCard;
+
+import java.util.List;
 
 /**
  * Created by Brucelee Thanh on 08/01/2017.
@@ -21,9 +24,11 @@ import com.example.vuduc.apptuthien.R;
 public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHolder>{
 
     private Context rootContext;
+    private List<HomeCard> homeCardLists;
 
-    public MainMenuAdapter(Context context){
-        rootContext = context;
+    public MainMenuAdapter(Context context, List<HomeCard> homeCardLists){
+        this.rootContext = context;
+        this.homeCardLists = homeCardLists;
     }
 
     @Override
@@ -35,12 +40,20 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
+        final HomeCard homeCard=homeCardLists.get(position);
+        holder.tvMenuTitle.setText(homeCard.getTenChucNang());
+
         holder.cvMainMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                xuLyDoiManHinhTrongMenu(homeCard);
                 rootContext.startActivity(new Intent(rootContext, ListProjectActivity.class));
             }
         });
+    }
+
+    private void xuLyDoiManHinhTrongMenu(HomeCard homeCard) {
+        //thieu man hinh deo lam duoc OK
     }
 
     @Override
