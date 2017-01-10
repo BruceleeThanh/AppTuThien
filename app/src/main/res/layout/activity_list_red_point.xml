@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_list_project"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.vuduc.apptuthien.ListProjectActivity">
+    tools:context="com.example.vuduc.apptuthien.ListRedPointActivity">
 
     <TextView
         android:id="@+id/txtDanhSachDuAn"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text="Danh sách dự án từ thiện"
+        android:text="Danh sách điểm nóng"
         android:gravity="center"
         android:textSize="22sp"
         android:background="@android:color/darker_gray"

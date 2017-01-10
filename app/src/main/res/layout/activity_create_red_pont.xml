@@ -2,7 +2,7 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.vuduc.apptuthien.CreateProjectActivity"
+    tools:context="com.example.vuduc.apptuthien.CreateRedPontActivity"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fitsSystemWindows="true">
@@ -18,7 +18,7 @@
             android:id="@+id/txtDanhSachDuAn"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Tạo mới dự án từ thiện"
+            android:text="Tạo mới điểm nóng"
             android:gravity="center"
             android:textSize="22sp"
             android:background="@android:color/darker_gray"
@@ -33,7 +33,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tên dự án: "
+                android:text="Tên điểm nóng: "
                 android:textSize="@dimen/txt_large"
                 android:textStyle="bold"/>
 
@@ -41,7 +41,7 @@
                 android:id="@+id/editProjectName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nhập tên dự án" />
+                android:hint="Nhập tên điểm nóng" />
         </LinearLayout>
 
         <LinearLayout
@@ -53,7 +53,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nội dung dự án: "
+                android:text="Nội dung: "
                 android:textSize="@dimen/txt_large"
                 android:textStyle="bold"/>
 
@@ -86,38 +86,19 @@
                 android:textSize="@dimen/txt_large"
                 android:textStyle="bold"/>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:id="@+id/editDayStartProject"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="date"
-                        android:hint="Nhập ngày bắt đầu"
-                        android:ems="10"
-                        android:layout_weight="1"/>
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <EditText
-                        android:id="@+id/editDayEndProject"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="date"
-                        android:hint="Nhập ngày kết thúc"
-                        android:ems="10"
-                        android:layout_weight="1"/>
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
+                <EditText
+                    android:id="@+id/editDayStartProject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:hint="Nhập ngày xảy ra"
+                    android:ems="10"
+                    android:layout_weight="1"/>
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 

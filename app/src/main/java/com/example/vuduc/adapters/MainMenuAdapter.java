@@ -40,7 +40,8 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        final HomeCard homeCard=homeCardLists.get(position);
+        final HomeCard homeCard = homeCardLists.get(position);
+
         holder.tvMenuTitle.setText(homeCard.getTenChucNang());
 
         holder.cvMainMenu.setOnClickListener(new View.OnClickListener() {
