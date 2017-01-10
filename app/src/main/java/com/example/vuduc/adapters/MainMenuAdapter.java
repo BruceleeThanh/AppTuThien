@@ -17,9 +17,6 @@ import com.example.vuduc.model.HomeCard;
 
 import java.util.List;
 
-/**
- * Created by Brucelee Thanh on 08/01/2017.
- */
 
 public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHolder>{
 

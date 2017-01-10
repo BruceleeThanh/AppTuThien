@@ -2,9 +2,6 @@ package com.example.vuduc.model;
 
 import java.util.Date;
 
-/**
- * Created by VuDuc on 1/9/2017.
- */
 
 public class RedPoint {
     private String _id;

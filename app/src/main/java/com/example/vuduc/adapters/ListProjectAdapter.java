@@ -11,9 +11,6 @@ import android.view.ViewGroup;
 import com.example.vuduc.apptuthien.ProjectDetailActivity;
 import com.example.vuduc.apptuthien.R;
 
-/**
- * Created by Brucelee Thanh on 08/01/2017.
- */
 
 public class ListProjectAdapter extends RecyclerView.Adapter<ListProjectAdapter.ViewHolder>{
 
