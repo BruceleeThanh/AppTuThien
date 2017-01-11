@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.vuduc.apptuthien.CreateProjectActivity"
+    tools:context="com.example.vuduc.apptuthien.EditProjectActivity"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fitsSystemWindows="true">
@@ -19,7 +19,7 @@
             android:id="@+id/txtDanhSachDuAn"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Tạo mới dự án từ thiện"
+            android:text="Sửa thông tin dự án từ thiện"
             android:gravity="center"
             android:textSize="22sp"
             android:background="@android:color/darker_gray"
@@ -194,7 +194,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Danh sách nhà tài trợ: "
+                    android:text="Kinh phí được tài trợ: "
                     android:layout_marginTop="20dp"
                     android:textSize="@dimen/txt_large"
                     android:textStyle="bold"/>

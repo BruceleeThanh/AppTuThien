@@ -56,7 +56,7 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return 10;
+        return homeCardLists.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

@@ -205,6 +205,14 @@
             android:layout_marginTop="10dp"
             android:text="Mời tài trợ"
             android:textSize="18sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:text="Sửa thông tin"
+            android:textSize="18sp" />
     </LinearLayout>
 
 </LinearLayout>
