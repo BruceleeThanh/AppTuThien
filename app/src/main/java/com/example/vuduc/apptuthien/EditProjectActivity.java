@@ -9,7 +9,7 @@ import android.widget.Spinner;
 
 public class EditProjectActivity extends AppCompatActivity {
 
-    String arr[]={"Chưa thực hiện", "Đang thực hiện", "Đã kết thúc"};
+    String spinArr[]={"Chưa thực hiện", "Đang thực hiện", "Đã kết thúc"};
     String project_startus;
     Spinner spin;
     ArrayAdapter<String> spinAdapter;
@@ -27,7 +27,7 @@ public class EditProjectActivity extends AppCompatActivity {
 
     private void addControls() {
         spin= (Spinner) findViewById(R.id.spinner_project_startus);
-        spinAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,arr);
+        spinAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,spinArr);
         spinAdapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         spin.setAdapter(spinAdapter);
     }
@@ -35,12 +35,12 @@ public class EditProjectActivity extends AppCompatActivity {
     private class MyProcessSpiner implements AdapterView.OnItemSelectedListener {
         @Override
         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-            project_startus = arr[i];
+            project_startus = spinArr[i];
         }
 
         @Override
         public void onNothingSelected(AdapterView<?> adapterView) {
-            project_startus = arr[0];
+            project_startus = spinArr[0];
         }
     }
 }

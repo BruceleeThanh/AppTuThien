@@ -15,4 +15,121 @@
         Ngoài ra, cùng với cách thức như thế này, các tổ chức, nhóm tình nguyện hoàn toàn có thể mở rộng quy mô ra các đối tượng khác như trẻ lang thang, trẻ tự kỉ…
         Tuy nhiên khi áp dụng tại Việt Nam, việc lưu tâm tới sức khỏe, và yếu tố tâm lý của bệnh nhân, và những người kém may mắn là yếu tố vô cùng quan trọng.
     </string>
+
+    <string-array name="arrTinhThanh">
+        <item>An Giang</item>
+        <item>Bà Rịa - Vũng Tàu</item>
+        <item>Bắc Giang</item>
+        <item>Bắc Kạn</item>
+        <item>Bạc Liêu</item>
+        <item>Bắc Ninh</item>
+        <item>Bến Tre</item>
+        <item>Bình Định</item>
+        <item>Bình Dương</item>
+        <item>Bình Phước</item>
+        <item>Bình Thuận</item>
+        <item>Cà Mau</item>
+        <item>Cao Bằng</item>
+        <item>Đắk Lắk</item>
+        <item>Đắk Nông</item>
+        <item>Điện Biên</item>
+        <item>Đồng Nai</item>
+        <item>Đồng Tháp</item>
+        <item>Gia Lai</item>
+        <item>Hà Giang</item>
+        <item>Hà Nam</item>
+        <item>Hà Tĩnh</item>
+        <item>Hải Dương</item>
+        <item>Hậu Giang</item>
+        <item>Hòa Bình</item>
+        <item>Hưng Yên</item>
+        <item>Khánh Hòa</item>
+        <item>Kiên Giang</item>
+        <item>Kon Tum</item>
+        <item>Lai Châu</item>
+        <item>Lâm Đồng</item>
+        <item>Lạng Sơn</item>
+        <item>Lào Cai</item>
+        <item>Long An</item>
+        <item>Nam Định</item>
+        <item>Nghệ An</item>
+        <item>Ninh Bình</item>
+        <item>Ninh Thuận</item>
+        <item>Phú Thọ</item>
+        <item>Quảng Bình</item>
+        <item>Quảng Nam</item>
+        <item>Quảng Ngãi</item>
+        <item>Quảng Ninh</item>
+        <item>Quảng Trị</item>
+        <item>Sóc Trăng</item>
+        <item>Sơn La</item>
+        <item>Tây Ninh</item>
+        <item>Thái Bình</item>
+        <item>Thái Nguyên</item>
+        <item>Thanh Hóa</item>
+        <item>Thừa Thiên Huế</item>
+        <item>Tiền Giang</item>
+        <item>Trà Vinh</item>
+        <item>Tuyên Quang</item>
+        <item>Vĩnh Long</item>
+        <item>Vĩnh Phúc</item>
+        <item>Yên Bái</item>
+        <item>Phú Yên</item>
+        <item>Cần Thơ</item>
+        <item>Đà Nẵng</item>
+        <item>Hải Phòng</item>
+        <item>Hà Nội</item>
+        <item>TP HCM</item>
+    </string-array>
+
+    <string-array name="HaNoiDistrict">
+        <item>Quận Ba Đình</item>
+        <item>Quận Hoàn Kiếm</item>
+        <item>Quận Hai Bà Trưng</item>
+        <item>Quận Đống Đa</item>
+        <item>Quận Tây Hồ</item>
+        <item>Quận Cầu Giấy</item>
+        <item>Quận Thanh Xuân</item>
+        <item>Quận Hoàng Mai</item>
+        <item>Quận Long Biên</item>
+        <item>Huyện Từ Liêm</item>
+        <item>Huyện Thanh Trì</item>
+        <item>Huyện Gia Lâm</item>
+        <item>Huyện Đông Anh</item>
+        <item>Huyện Sóc Sơn</item>
+        <item>Quận Hà Đông</item>
+        <item>Thị xã Sơn Tây</item>
+        <item>Huyện Ba Vì</item>
+        <item>Huyện Phúc Thọ</item>
+        <item>Huyện Thạch Thất</item>
+        <item>Huyện Quốc Oai</item>
+        <item>Huyện Chương Mỹ</item>
+        <item>Huyện Đan Phượng</item>
+        <item>Huyện Hoài Đức</item>
+        <item>Huyện Thanh Oai</item>
+        <item>Huyện Mỹ Đức</item>
+        <item>Huyện Ứng Hoà</item>
+        <item>Huyện Thường Tín</item>
+        <item>Huyện Phú Xuyên</item>
+        <item>Huyện Mê Linh</item>
+    </string-array>
+
+    <string-array name="HoangMaiWards">
+        <item>Định Công</item>
+        <item>Đại Kim</item>
+        <item>Giáp Bát</item>
+        <item>Hoàng Liệt</item>
+        <item>Hoàng Văn Thụ</item>
+        <item>Lĩnh Nam</item>
+        <item>Mai Động</item>
+        <item>Tân Mai</item>
+        <item>Thanh Trì</item>
+        <item>Thịnh Liệt</item>
+        <item>Trần Phú</item>
+        <item>Tương Mai</item>
+        <item>Vĩnh Hưng</item>
+        <item>Yên Sở</item>
+
+    </string-array>
+
 </resources>

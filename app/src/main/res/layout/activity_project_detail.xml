@@ -23,7 +23,9 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         app:srcCompat="@drawable/vidu_project1"
-        android:id="@+id/imageView2" />
+        android:id="@+id/imageView2"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
 
     <TextView
         android:layout_width="match_parent"

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.vuduc.apptuthien.CreateRedPontActivity"
+    tools:context="com.example.vuduc.apptuthien.EditRedPointActivity"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fitsSystemWindows="true">
@@ -18,7 +19,7 @@
             android:id="@+id/txtDanhSachDuAn"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Tạo mới điểm nóng"
+            android:text="Sửa thông tin điểm nóng"
             android:gravity="center"
             android:textSize="22sp"
             android:background="@android:color/darker_gray"
@@ -169,6 +170,19 @@
                 </Spinner>
             </LinearLayout>
 
+            <Button
+                android:id="@+id/btn_redpoint_them"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Thêm"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_redpoint_listLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
         </LinearLayout>
 
         <LinearLayout
@@ -212,6 +226,6 @@
                 android:layout_height="wrap_content"
                 android:text="Hủy"/>
         </LinearLayout>
-        
+
     </LinearLayout>
 </ScrollView>

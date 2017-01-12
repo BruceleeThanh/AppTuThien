@@ -22,7 +22,9 @@
         <activity android:name=".CreateProjectActivity" />
         <activity android:name=".CreateRedPontActivity" />
         <activity android:name=".ListRedPointActivity" />
-        <activity android:name=".EditProjectActivity"></activity>
+        <activity android:name=".EditProjectActivity" />
+        <activity android:name=".EditRedPointActivity" />
+        <activity android:name=".RedpointDetailActivity"></activity>
     </application>
 
 </manifest>

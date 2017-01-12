@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-public class CreateRedPontActivity extends AppCompatActivity {
+public class EditRedPointActivity extends AppCompatActivity {
 
     Spinner spinner_redpoint_City, spinner_redpoint_District, spinner_redpoint_Wards, spinner_redpoint_status;
     ArrayAdapter<CharSequence> citySpinAdapter;
@@ -15,12 +15,12 @@ public class CreateRedPontActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_red_pont);
+        setContentView(R.layout.activity_edit_red_point);
         addControls();
         addEvents();
     }
-
     private void addEvents() {
+
     }
 
     private void addControls() {
