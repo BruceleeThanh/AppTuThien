@@ -45,13 +45,24 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
             @Override
             public void onClick(View view) {
                 xuLyDoiManHinhTrongMenu(homeCard);
-                rootContext.startActivity(new Intent(rootContext, ListProjectActivity.class));
+                //rootContext.startActivity(new Intent(rootContext, ListProjectActivity.class));
             }
         });
     }
 
     private void xuLyDoiManHinhTrongMenu(HomeCard homeCard) {
-        //thieu man hinh deo lam duoc OK
+        switch (homeCard.getTenChucNang()){
+            case "Dự án từ thiện":
+                rootContext.startActivity(new Intent(rootContext,ListProjectActivity.class));
+                break;
+            case "Điểm nóng":
+                rootContext.startActivity(new Intent(rootContext,ListRedPointAdapter.class));
+                break;
+            case "Duyệt điểm nóng":
+                break;
+            default:
+                rootContext.startActivity(new Intent(rootContext,ListProjectActivity.class));
+        }
     }
 
     @Override

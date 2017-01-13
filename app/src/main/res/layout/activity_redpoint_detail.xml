@@ -22,7 +22,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            app:srcCompat="@drawable/vidu_project1"
+            app:srcCompat="@drawable/vidu_redpoint1"
             android:id="@+id/imageView2"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"/>
@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/viduProject_title"
+            android:text="Lũ lụt ở Hà Tĩnh"
             android:textSize="22sp"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"/>
@@ -53,28 +53,6 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Đơn vị tổ chức:"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15sp"
-                android:layout_marginTop="10dp"
-                android:text="Hội từ thiện TLU"
-                android:textSize="18sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
@@ -90,14 +68,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15sp"
                 android:layout_marginTop="10dp"
-                android:text="Bắt đầu từ 1/1/2016"
+                android:text="1/1/2016"
                 android:textSize="18sp"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -107,13 +85,12 @@
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15sp"
-                android:layout_marginTop="10dp"
-                android:text="Trái đất"
-                android:textSize="18sp"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_redpoint__detail_listLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
         </LinearLayout>
 
         <LinearLayout
@@ -190,9 +167,10 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/vidu_project2"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/vidu_redpoint1"
                 android:id="@+id/imageView3" />
-
 
         </LinearLayout>
 

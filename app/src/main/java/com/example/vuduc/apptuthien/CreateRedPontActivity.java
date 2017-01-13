@@ -2,8 +2,17 @@ package com.example.vuduc.apptuthien;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+
+import com.example.vuduc.adapters.ListLocationAdapter;
+import com.example.vuduc.model.Location;
+
+import java.util.ArrayList;
 
 public class CreateRedPontActivity extends AppCompatActivity {
 
@@ -12,6 +21,12 @@ public class CreateRedPontActivity extends AppCompatActivity {
     ArrayAdapter<CharSequence> districtSpinAdapter;
     ArrayAdapter<CharSequence> wardsSpinAdapter;
     ArrayAdapter<String> statusSpinAdapter;
+
+    Button btn_redpoint_them;
+    RecyclerView rv_redpoint_listLocation;
+    ArrayList<Location> locationList;
+    ListLocationAdapter locationAdapter;
+    String city = "", district = "", ward = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,9 +36,24 @@ public class CreateRedPontActivity extends AppCompatActivity {
     }
 
     private void addEvents() {
+        spinner_redpoint_City.setOnItemSelectedListener(new CityProcessEvent());
+        spinner_redpoint_District.setOnItemSelectedListener(new DistrictProcessEvent());
+        spinner_redpoint_Wards.setOnItemSelectedListener(new WardProcessEvent());
+        btn_redpoint_them.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     private void addControls() {
+        btn_redpoint_them= (Button) findViewById(R.id.btn_redpoint_them);
+        rv_redpoint_listLocation= (RecyclerView) findViewById(R.id.rv_redpoint_listLocation);
+        locationList=new ArrayList<>();
+
+
+
         spinner_redpoint_City= (Spinner) findViewById(R.id.spinner_redpoint_City);
         spinner_redpoint_District= (Spinner) findViewById(R.id.spinner_redpoint_District);
         spinner_redpoint_Wards= (Spinner) findViewById(R.id.spinner_redpoint_Wards);
@@ -42,5 +72,41 @@ public class CreateRedPontActivity extends AppCompatActivity {
         spinner_redpoint_Wards.setAdapter(wardsSpinAdapter);
 
 
+    }
+
+    private class CityProcessEvent implements android.widget.AdapterView.OnItemSelectedListener {
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            city=getResources().getStringArray(R.array.arrTinhThanh)[i];
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+            city="";
+        }
+    }
+
+    private class DistrictProcessEvent implements android.widget.AdapterView.OnItemSelectedListener {
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            district=getResources().getStringArray(R.array.HaNoiDistrict)[i];
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+            district="";
+        }
+    }
+
+    private class WardProcessEvent implements android.widget.AdapterView.OnItemSelectedListener {
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            ward=getResources().getStringArray(R.array.HoangMaiWards)[i];
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+            ward="";
+        }
     }
 }

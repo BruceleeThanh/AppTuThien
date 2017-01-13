@@ -167,8 +167,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                 </Spinner>
+
             </LinearLayout>
 
+            <Button
+                android:id="@+id/btn_redpoint_them"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Thêm"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_redpoint_listLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
         <LinearLayout
