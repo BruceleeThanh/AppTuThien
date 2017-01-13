@@ -9,5 +9,6 @@ public class RedpointDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_redpoint_detail);
+        getSupportActionBar().setTitle("Thông tin điểm nóng");
     }
 }

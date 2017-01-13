@@ -16,6 +16,7 @@ public class EditRedPointActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_red_point);
+        getSupportActionBar().setTitle("Sửa thông tin điểm nóng");
         addControls();
         addEvents();
     }

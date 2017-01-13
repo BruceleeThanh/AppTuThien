@@ -31,6 +31,7 @@ public class CreateRedPontActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_red_pont);
+        getSupportActionBar().setTitle("Tạo mới điểm nóng");
         addControls();
         addEvents();
     }

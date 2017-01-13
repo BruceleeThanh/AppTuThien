@@ -17,6 +17,7 @@ public class ListRedPointActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_red_point);
+        getSupportActionBar().setTitle("Danh sách điểm nóng");
         addControls();
         addEvents();
     }

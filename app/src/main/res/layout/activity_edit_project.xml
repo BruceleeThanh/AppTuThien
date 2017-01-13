@@ -15,15 +15,6 @@
         android:orientation="vertical"
         android:weightSum="1">
 
-        <TextView
-            android:id="@+id/txtDanhSachDuAn"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="Sửa thông tin dự án từ thiện"
-            android:gravity="center"
-            android:textSize="22sp"
-            android:background="@android:color/darker_gray"
-            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"

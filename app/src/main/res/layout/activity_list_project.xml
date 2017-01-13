@@ -7,21 +7,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.vuduc.apptuthien.ListProjectActivity">
 
-    <TextView
-        android:id="@+id/txtDanhSachDuAn"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="Danh sách dự án từ thiện"
-        android:gravity="center"
-        android:textSize="22sp"
-        android:background="@android:color/darker_gray"
-        android:textStyle="bold" />
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvListProject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDanhSachDuAn"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

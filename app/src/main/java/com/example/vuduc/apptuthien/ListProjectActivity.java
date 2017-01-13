@@ -16,6 +16,7 @@ public class ListProjectActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_project);
+        getSupportActionBar().setTitle("Danh sách dự án từ thiện");
         this.addControls();
         this.initListProject();
     }

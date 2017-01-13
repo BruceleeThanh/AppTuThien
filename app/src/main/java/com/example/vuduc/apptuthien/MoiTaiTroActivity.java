@@ -9,5 +9,6 @@ public class MoiTaiTroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_moi_tai_tro);
+        getSupportActionBar().setTitle("Mời tài trợ");
     }
 }
