@@ -9,12 +9,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity"
+                    >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".SignupActivity" />
         <activity android:name=".ProjectDetailActivity" />
@@ -24,7 +26,10 @@
         <activity android:name=".ListRedPointActivity" />
         <activity android:name=".EditProjectActivity" />
         <activity android:name=".EditRedPointActivity" />
-        <activity android:name=".RedpointDetailActivity"></activity>
+        <activity android:name=".RedpointDetailActivity" />
+        <activity android:name=".ListRedpointCheckedActivity" />
+        <activity android:name=".MoiTaiTroActivity" />
+        <activity android:name=".XemTaiTroActivity"></activity>
     </application>
 
 </manifest>

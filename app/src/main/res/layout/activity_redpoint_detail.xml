@@ -183,7 +183,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Mời tài trợ"
+                android:text="Đăng ký cứu trợ"
                 android:textSize="18sp" />
 
             <Button

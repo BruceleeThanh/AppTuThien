@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.vuduc.apptuthien.ListProjectActivity;
+import com.example.vuduc.apptuthien.ListRedPointActivity;
+import com.example.vuduc.apptuthien.ListRedpointCheckedActivity;
 import com.example.vuduc.apptuthien.ProjectDetailActivity;
 import com.example.vuduc.apptuthien.R;
 import com.example.vuduc.model.HomeCard;
@@ -56,12 +58,12 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
                 rootContext.startActivity(new Intent(rootContext,ListProjectActivity.class));
                 break;
             case "Điểm nóng":
-                rootContext.startActivity(new Intent(rootContext,ListRedPointAdapter.class));
+                rootContext.startActivity(new Intent(rootContext,ListRedPointActivity.class));
                 break;
             case "Duyệt điểm nóng":
+                rootContext.startActivity(new Intent(rootContext,ListRedpointCheckedActivity.class));
                 break;
             default:
-                rootContext.startActivity(new Intent(rootContext,ListProjectActivity.class));
         }
     }
 
