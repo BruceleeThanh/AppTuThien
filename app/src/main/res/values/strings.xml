@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">AppTuThien</string>
+    <string name="app_name">Vòng tay</string>
+
+    <string name="openDrawer">Open navigation drawer</string>
+    <string name="closeDrawer">Close navigation drawer</string>
+
     <string name="viduProject_title">Dự án Ánh đèn Flash của hy vọng</string>
     <string name="viduProject_content">
         Nếu bạn là một người đam mê nhiếp ảnh và mong muốn cống hiến một phần
@@ -131,5 +135,7 @@
         <item>Yên Sở</item>
 
     </string-array>
+
+    <string name="fab_create_project">Tạo dự án</string>
 
 </resources>

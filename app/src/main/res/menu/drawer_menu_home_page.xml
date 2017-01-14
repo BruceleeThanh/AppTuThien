@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/groupAccess"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/itemProfile"
+            android:icon="@drawable/ic_home_white_24dp"
+            android:title="Trang cá nhân" />
+        <item
+            android:id="@+id/itemProject"
+            android:icon="@drawable/ic_event_white_24dp"
+            android:title="Dự án của tôi" />
+
+    </group>
+
+    <group
+        android:id="@+id/groupAction"
+        android:checkableBehavior="single">
+            <item
+                android:id="@+id/itemSetting"
+                android:title="Đăng xuất" />
+    </group>
+</menu>

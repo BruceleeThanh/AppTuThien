@@ -6,6 +6,8 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import com.example.vuduc.adapters.ListRedPointAdapter;
 
@@ -32,5 +34,12 @@ public class ListRedPointActivity extends AppCompatActivity {
         rvListRedPoint.setItemAnimator(new DefaultItemAnimator());
         listRedPointAdapter=new ListRedPointAdapter(this);
         rvListRedPoint.setAdapter(listRedPointAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.toolbar_search, menu);
+        return true;
     }
 }
