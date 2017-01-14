@@ -147,7 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Đơn vị đã tài trợ"
+            android:text="Kinh phí\nđược tài trợ"
             android:textSize="18sp"
             android:textStyle="bold"/>
 
@@ -161,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15sp"
                 android:layout_marginTop="10dp"
-                android:text="1. Đại học Thăng Long - 500000000 đồng"
+                android:text="500000000 đồng"
                 android:textSize="18sp"/>
 
             <TextView
@@ -169,7 +169,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15sp"
                 android:layout_marginTop="10dp"
-                android:text="2. Đại học Thăng Long - 500000000 đồng"
+                android:text="Link sao kê"
                 android:textSize="18sp"/>
         </LinearLayout>
     </LinearLayout>

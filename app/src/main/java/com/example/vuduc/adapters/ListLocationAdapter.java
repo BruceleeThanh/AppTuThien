@@ -29,7 +29,7 @@ public class ListLocationAdapter extends RecyclerView.Adapter<ListLocationAdapte
     public LocationViewHoder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_location,parent,false);
         LocationViewHoder locationViewHoder=new LocationViewHoder(view);
-        return null;
+        return locationViewHoder;
     }
 
     @Override

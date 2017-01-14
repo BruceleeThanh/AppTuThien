@@ -2,6 +2,7 @@ package com.example.vuduc.apptuthien;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
@@ -40,12 +41,25 @@ public class CreateRedPontActivity extends AppCompatActivity {
         spinner_redpoint_City.setOnItemSelectedListener(new CityProcessEvent());
         spinner_redpoint_District.setOnItemSelectedListener(new DistrictProcessEvent());
         spinner_redpoint_Wards.setOnItemSelectedListener(new WardProcessEvent());
+
+        //Danh sach dia diem
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        rv_redpoint_listLocation.setLayoutManager(linearLayoutManager);
+        locationAdapter=new ListLocationAdapter(this, locationList);
+        rv_redpoint_listLocation.setAdapter(locationAdapter);
+
         btn_redpoint_them.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                xuLyThemLocation();
             }
         });
+    }
+
+    private void xuLyThemLocation() {
+        Location a =new Location(city, district, ward);
+        locationList.add(a);
+        locationAdapter.notifyDataSetChanged();
     }
 
     private void addControls() {

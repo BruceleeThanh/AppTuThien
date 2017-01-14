@@ -37,6 +37,10 @@ public class ProjectTuThien {
     public ProjectTuThien() {
     }
 
+    public ProjectTuThien(String title) {
+        this.title = title;
+    }
+
     public String get_id() {
         return _id;
     }

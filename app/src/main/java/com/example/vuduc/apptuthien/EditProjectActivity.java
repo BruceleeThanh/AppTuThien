@@ -10,7 +10,7 @@ import android.widget.Spinner;
 public class EditProjectActivity extends AppCompatActivity {
 
     String spinArr[]={"Chưa thực hiện", "Đang thực hiện", "Đã kết thúc"};
-    String project_startus;
+    String project_status;
     Spinner spin;
     ArrayAdapter<String> spinAdapter;
     @Override
@@ -36,12 +36,12 @@ public class EditProjectActivity extends AppCompatActivity {
     private class MyProcessSpiner implements AdapterView.OnItemSelectedListener {
         @Override
         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-            project_startus = spinArr[i];
+            project_status = spinArr[i];
         }
 
         @Override
         public void onNothingSelected(AdapterView<?> adapterView) {
-            project_startus = spinArr[0];
+            project_status = spinArr[0];
         }
     }
 }

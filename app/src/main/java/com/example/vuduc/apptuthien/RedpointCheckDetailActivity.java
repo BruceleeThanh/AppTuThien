@@ -16,27 +16,21 @@ import com.example.vuduc.model.ProjectTuThien;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RedpointDetailActivity extends AppCompatActivity {
+public class RedpointCheckDetailActivity extends AppCompatActivity {
 
     RecyclerView rv_redpoint__detail_listLocation;
     ListLocationAdapter listLocationAdapter;
     List<Location> locationLists;
 
-    //Danh sach du an tai tro
-    RecyclerView rv_list_link_project;
-    ListLinkProjectAdapter listLinkProjectAdapter;
-    List<ProjectTuThien> projectTuThienList;
-
     Button btn_edit_thongtin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_redpoint_detail);
-        getSupportActionBar().setTitle("Thông tin điểm nóng");
+        setContentView(R.layout.activity_redpoint_check_detail);
+        getSupportActionBar().setTitle("Điểm nóng chưa được duyệt");
         addControls();
         addEvents();
     }
-
     private void addEvents() {
         //Danh sach dia diem
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -50,26 +44,10 @@ public class RedpointDetailActivity extends AppCompatActivity {
         btn_edit_thongtin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RedpointDetailActivity.this, EditRedPointActivity.class));
+                startActivity(new Intent(RedpointCheckDetailActivity.this, EditRedPointActivity.class));
             }
         });
 
-        //Chuyen sang du an lien ket
-        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(this);
-        rv_list_link_project.setLayoutManager(linearLayoutManager1);
-        projectTuThienList=new ArrayList<>();
-        listLinkProjectAdapter=new ListLinkProjectAdapter(this, projectTuThienList);
-        rv_list_link_project.setAdapter(listLinkProjectAdapter);
-        LinkProjectData();
-    }
-
-    private void LinkProjectData() {
-        ProjectTuThien b=new ProjectTuThien("Dự án từ thiện 1");
-        projectTuThienList.add(b);
-
-        b=new ProjectTuThien("Dự án từ thiện 2");
-        projectTuThienList.add(b);
-        listLinkProjectAdapter.notifyDataSetChanged();
     }
 
     private void LocationData() {
@@ -85,7 +63,6 @@ public class RedpointDetailActivity extends AppCompatActivity {
     private void addControls() {
         rv_redpoint__detail_listLocation= (RecyclerView) findViewById(R.id.rv_redpoint__detail_listLocation);
         btn_edit_thongtin= (Button) findViewById(R.id.btn_edit_thongtin);
-        rv_list_link_project= (RecyclerView) findViewById(R.id.rv_list_link_project);
 
     }
 }
