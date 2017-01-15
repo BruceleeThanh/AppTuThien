@@ -109,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                         // catch event of drawer menu in here
                         return true;
                     case R.id.itemProject:
+                        startActivity(new Intent(MainActivity.this, ListProjectMeActivity.class));
                         return true;
                     default:
                         Toast.makeText(getApplicationContext(), "Somethings Wrong", Toast.LENGTH_SHORT).show();

@@ -22,7 +22,7 @@ public class EditRedPointActivity extends AppCompatActivity {
     ArrayAdapter<CharSequence> districtSpinAdapter;
     ArrayAdapter<CharSequence> wardsSpinAdapter;
     ArrayAdapter<String> statusSpinAdapter;
-    String spinStatus[]={"Chưa khẩn cấp", "Khẩn cấp", "Cựu kỳ khẩn cấp"};
+    String spinStatus[]={"Chưa khẩn cấp", "Khẩn cấp", "Cực kỳ khẩn cấp"};
     String redpoint_statuts;
 
     Button btn_redpoint_them;

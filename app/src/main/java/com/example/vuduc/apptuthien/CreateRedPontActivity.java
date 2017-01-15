@@ -22,7 +22,9 @@ public class CreateRedPontActivity extends AppCompatActivity {
     ArrayAdapter<CharSequence> districtSpinAdapter;
     ArrayAdapter<CharSequence> wardsSpinAdapter;
     ArrayAdapter<String> statusSpinAdapter;
-
+    String spinStatus[]={"Chưa khẩn cấp", "Khẩn cấp", "Cực kỳ khẩn cấp"};
+    String redpoint_statuts;
+    // danh sach location
     Button btn_redpoint_them;
     RecyclerView rv_redpoint_listLocation;
     ArrayList<Location> locationList;
@@ -41,7 +43,7 @@ public class CreateRedPontActivity extends AppCompatActivity {
         spinner_redpoint_City.setOnItemSelectedListener(new CityProcessEvent());
         spinner_redpoint_District.setOnItemSelectedListener(new DistrictProcessEvent());
         spinner_redpoint_Wards.setOnItemSelectedListener(new WardProcessEvent());
-
+        spinner_redpoint_status.setOnItemSelectedListener(new StatusProcessEvent());
         //Danh sach dia diem
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rv_redpoint_listLocation.setLayoutManager(linearLayoutManager);
@@ -63,12 +65,12 @@ public class CreateRedPontActivity extends AppCompatActivity {
     }
 
     private void addControls() {
+        //List location
         btn_redpoint_them= (Button) findViewById(R.id.btn_redpoint_them);
         rv_redpoint_listLocation= (RecyclerView) findViewById(R.id.rv_redpoint_listLocation);
         locationList=new ArrayList<>();
 
-
-
+        //Spinner location
         spinner_redpoint_City= (Spinner) findViewById(R.id.spinner_redpoint_City);
         spinner_redpoint_District= (Spinner) findViewById(R.id.spinner_redpoint_District);
         spinner_redpoint_Wards= (Spinner) findViewById(R.id.spinner_redpoint_Wards);
@@ -86,7 +88,9 @@ public class CreateRedPontActivity extends AppCompatActivity {
         wardsSpinAdapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         spinner_redpoint_Wards.setAdapter(wardsSpinAdapter);
 
-
+        statusSpinAdapter=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,spinStatus);
+        statusSpinAdapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+        spinner_redpoint_status.setAdapter(statusSpinAdapter);
     }
 
     private class CityProcessEvent implements android.widget.AdapterView.OnItemSelectedListener {
@@ -122,6 +126,18 @@ public class CreateRedPontActivity extends AppCompatActivity {
         @Override
         public void onNothingSelected(AdapterView<?> adapterView) {
             ward="";
+        }
+    }
+
+    private class StatusProcessEvent implements AdapterView.OnItemSelectedListener {
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            redpoint_statuts=spinStatus[i];
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+            redpoint_statuts=spinStatus[0];
         }
     }
 }

@@ -9,21 +9,24 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.vuduc.apptuthien.ProjectDetailActivity;
+import com.example.vuduc.apptuthien.ProjectDetailSignupActivity;
 import com.example.vuduc.apptuthien.R;
 
+/**
+ * Created by VuDuc on 1/15/2017.
+ */
 
-public class ListProjectAdapter extends RecyclerView.Adapter<ListProjectAdapter.ViewHolder>{
-
+public class ListProjectSignupAdapter extends RecyclerView.Adapter<ListProjectSignupAdapter.ViewHolder>  {
     private Context rootContext;
 
-    public ListProjectAdapter(Context rootContext) {
+    public ListProjectSignupAdapter(Context rootContext) {
         this.rootContext = rootContext;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_project_shortcut, parent, false);
-        ListProjectAdapter.ViewHolder viewHolder = new ListProjectAdapter.ViewHolder(view);
+        ListProjectSignupAdapter.ViewHolder viewHolder = new ListProjectSignupAdapter.ViewHolder(view);
         return viewHolder;
     }
 
@@ -32,14 +35,14 @@ public class ListProjectAdapter extends RecyclerView.Adapter<ListProjectAdapter.
         holder.cvProject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                rootContext.startActivity(new Intent(rootContext, ProjectDetailActivity.class));
+                rootContext.startActivity(new Intent(rootContext, ProjectDetailSignupActivity.class));
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 3;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

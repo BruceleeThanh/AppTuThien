@@ -11,8 +11,7 @@ import android.view.View;
 
 import com.example.vuduc.adapters.ListProjectAdapter;
 
-public class ListProjectActivity extends AppCompatActivity {
-
+public class ListProjectMeActivity extends AppCompatActivity {
     RecyclerView rvListProject;
     ListProjectAdapter lpaAdapter;
     com.github.clans.fab.FloatingActionButton fabCreateProject;
@@ -20,10 +19,10 @@ public class ListProjectActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_project);
-        getSupportActionBar().setTitle("Danh sách dự án từ thiện");
-        this.addControls();
-        this.initListProject();
+        setContentView(R.layout.activity_list_project_me);
+        getSupportActionBar().setTitle("Danh sách dự án của tôi");
+        addControls();
+        addEvents();
     }
 
     private void addControls(){
@@ -31,7 +30,7 @@ public class ListProjectActivity extends AppCompatActivity {
         fabCreateProject = (com.github.clans.fab.FloatingActionButton) findViewById(R.id.fabCreateProject);
     }
 
-    private void initListProject(){
+    private void addEvents(){
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rvListProject.setLayoutManager(linearLayoutManager);
         lpaAdapter = new ListProjectAdapter(this);
@@ -41,7 +40,7 @@ public class ListProjectActivity extends AppCompatActivity {
         fabCreateProject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ListProjectActivity.this, CreateProjectActivity.class));
+                startActivity(new Intent(ListProjectMeActivity.this, CreateProjectActivity.class));
             }
         });
     }

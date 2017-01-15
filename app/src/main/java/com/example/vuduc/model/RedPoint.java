@@ -23,6 +23,10 @@ public class RedPoint {
     public RedPoint() {
     }
 
+    public RedPoint(String title) {
+        this.title = title;
+    }
+
     public String get_id() {
         return _id;
     }

@@ -28,6 +28,7 @@ public class RedpointDetailActivity extends AppCompatActivity {
     List<ProjectTuThien> projectTuThienList;
 
     Button btn_edit_thongtin;
+    Button btn_dangky_cuutro;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +62,14 @@ public class RedpointDetailActivity extends AppCompatActivity {
         listLinkProjectAdapter=new ListLinkProjectAdapter(this, projectTuThienList);
         rv_list_link_project.setAdapter(listLinkProjectAdapter);
         LinkProjectData();
+
+        //Dang ky cuu tro
+        btn_dangky_cuutro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RedpointDetailActivity.this, ListProjectSignupActivity.class));
+            }
+        });
     }
 
     private void LinkProjectData() {
@@ -87,5 +96,7 @@ public class RedpointDetailActivity extends AppCompatActivity {
         btn_edit_thongtin= (Button) findViewById(R.id.btn_edit_thongtin);
         rv_list_link_project= (RecyclerView) findViewById(R.id.rv_list_link_project);
 
+        //Dang ky cuu tro
+        btn_dangky_cuutro = (Button) findViewById(R.id.btn_dangky_cuutro);
     }
 }
