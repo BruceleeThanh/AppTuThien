@@ -7,7 +7,8 @@
     android:id="@+id/activity_list_project"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.vuduc.apptuthien.ListProjectSignupActivity">
+    tools:context="com.example.vuduc.apptuthien.ListProjectSignupActivity"
+    android:padding="@dimen/margin_small">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvListProject"

@@ -275,7 +275,8 @@
             android:layout_marginTop="10dp"
             android:text="Xem thông tin tài trợ"
             android:textSize="18sp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            style="@style/ButtonStyle"/>
 
     </LinearLayout>
 </LinearLayout>

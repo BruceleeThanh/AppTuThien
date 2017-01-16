@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.vuduc.apptuthien.MoiTaiTroActivity">
+    tools:context="com.example.vuduc.apptuthien.MoiTaiTroActivity"
+    android:paddingRight="@dimen/margin_small"
+    android:paddingLeft="@dimen/margin_small">
 
     <TextView
         android:layout_width="match_parent"
@@ -15,16 +17,20 @@
         android:textSize="18sp"/>
 
     <EditText
+        android:id="@+id/edit_MoiTaiTro"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/edit_MoiTaiTro" />
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@drawable/bg_black_white_tv"
+        android:hint="Ghi chú"
+        android:gravity="top"
+        android:inputType="textMultiLine"/>
 
     <Button
         android:id="@+id/btn_CapNhat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_large"
-        android:text="Cập nhật"/>
+        android:text="Cập nhật"
+        style="@style/ButtonStyle"/>
 </LinearLayout>

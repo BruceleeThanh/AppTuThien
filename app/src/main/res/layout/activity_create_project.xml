@@ -3,10 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.vuduc.apptuthien.CreateProjectActivity"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:fitsSystemWindows="true">
+    android:paddingLeft="@dimen/margin_small"
+    android:paddingRight="@dimen/margin_small"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.vuduc.apptuthien.CreateProjectActivity">
 
     <LinearLayout
         android:id="@+id/activity_create_project"
@@ -18,8 +20,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/margin_big">
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -32,14 +34,14 @@
                 android:id="@+id/editProjectName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nhập tên dự án" />
+                android:hint="Nhập tên dự án"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="@dimen/margin_big">
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -48,26 +50,23 @@
                 android:textSize="@dimen/txt_large"
                 android:textStyle="bold"/>
 
-            <ScrollView
+            <EditText
+                android:id="@+id/editProjectContent"
                 android:layout_width="match_parent"
-                android:layout_height="150dp">
-
-                <EditText
-                    android:id="@+id/editProjectContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Nhập nội dung dự án"
-                    android:inputType="textMultiLine"
-                    android:ems="10"/>
-            </ScrollView>
+                android:layout_height="150dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/bg_black_white_tv"
+                android:hint="Nhập nội dung dự án"
+                android:gravity="top"
+                android:inputType="textMultiLine"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/margin_big">
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -83,19 +82,19 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:text="Dài hạn"
+                    android:id="@+id/radioBtnLong"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioBtnLong"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:text="Dài hạn"/>
 
                 <RadioButton
-                    android:text="Ngắn hạn"
+                    android:id="@+id/radioBtnShoft"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/margin_medium"
-                    android:id="@+id/radioBtnShoft"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:text="Ngắn hạn"/>
             </RadioGroup>
 
         </LinearLayout>
@@ -103,8 +102,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="@dimen/margin_big">
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -122,7 +121,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tỉnh/Thành phố: "
-                    android:textSize="20sp" />
+                    android:textSize="20sp"/>
 
                 <Spinner
                     android:id="@+id/spinner_project_City"
@@ -141,7 +140,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Quận/Huyện: "
-                    android:textSize="20sp" />
+                    android:textSize="20sp"/>
 
                 <Spinner
                     android:id="@+id/spinner_project_District"
@@ -149,6 +148,7 @@
                     android:layout_height="wrap_content">
                 </Spinner>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -158,7 +158,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Xã/Phường: "
-                    android:textSize="20sp" />
+                    android:textSize="20sp"/>
 
                 <Spinner
                     android:id="@+id/spinner_project_Wards"
@@ -173,7 +173,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Thêm"/>
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="Thêm"
+                style="@style/ButtonStyle"/>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_project_listLocation"
@@ -184,8 +186,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/margin_big">
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -208,23 +210,24 @@
                         android:id="@+id/editDayStartProject"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="date"
-                        android:hint="Nhập ngày bắt đầu"
+                        android:layout_weight="1"
                         android:ems="10"
-                        android:layout_weight="1"/>
+                        android:hint="Nhập ngày bắt đầu"
+                        android:inputType="date"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <EditText
                         android:id="@+id/editDayEndProject"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="date"
-                        android:hint="Nhập ngày kết thúc"
+                        android:layout_weight="1"
                         android:ems="10"
-                        android:layout_weight="1"/>
+                        android:hint="Nhập ngày kết thúc"
+                        android:inputType="date"/>
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
@@ -233,8 +236,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/margin_big">
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -254,8 +257,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/margin_big">
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -265,8 +268,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Danh sách \nnhà tài trợ: "
                     android:layout_marginTop="20dp"
+                    android:text="Danh sách \nnhà tài trợ: "
                     android:textSize="@dimen/txt_large"
                     android:textStyle="bold"/>
 
@@ -280,25 +283,27 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <EditText
+                        android:id="@+id/editTienTaiTro"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:hint="Nhập số tiền"
                         android:ems="10"
-                        android:id="@+id/editTienTaiTro" />
+                        android:hint="Nhập số tiền"
+                        android:inputType="numberDecimal"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <EditText
+                        android:id="@+id/editSaoKe"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:hint="Sao kê (nếu có)"
                         android:ems="10"
-                        android:id="@+id/editSaoKe" />
+                        android:hint="Sao kê (nếu có)"
+                        android:inputType="numberDecimal"/>
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
@@ -307,8 +312,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/margin_big">
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -326,22 +331,29 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/margin_large"
             android:layout_marginBottom="@dimen/margin_big"
-            android:gravity="center">
+            android:layout_marginTop="@dimen/margin_large"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnLuu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lưu"/>
+                android:text="Lưu"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@drawable/selector_black_gray_btn"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                style="@style/ButtonStyle"/>
 
             <Button
                 android:id="@+id/Huy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hủy"/>
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:text="Hủy"
+                style="@style/ButtonStyle"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

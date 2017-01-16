@@ -142,7 +142,8 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:padding="12dp"
-            android:text="Tạo tài khoản"/>
+            android:text="Tạo tài khoản"
+            style="@style/ButtonStyle"/>
 
         <TextView
             android:id="@+id/txt_Link_Login"

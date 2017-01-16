@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     // Replacing the main content with ContentFragment Which is our Inbox View;
                     case R.id.itemProfile:
-                        // catch event of drawer menu in here
+                        startActivity(new Intent(MainActivity.this, UserProfileActivity.class));
                         return true;
                     case R.id.itemProject:
                         startActivity(new Intent(MainActivity.this, ListProjectMeActivity.class));

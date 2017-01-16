@@ -4,7 +4,8 @@
     android:id="@+id/activity_list_redpoint_checked"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.vuduc.apptuthien.ListRedpointCheckedActivity">
+    tools:context="com.example.vuduc.apptuthien.ListRedpointCheckedActivity"
+    android:padding="@dimen/margin_small">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvListRedPoint"

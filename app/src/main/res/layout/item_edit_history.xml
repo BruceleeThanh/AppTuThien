@@ -11,6 +11,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:text="17/01/2017 10:30"
+        android:paddingLeft="@dimen/margin_medium"
         android:textSize="14sp"
         android:clickable="true"/>
 

@@ -169,7 +169,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Đăng ký cứu trợ"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                style="@style/ButtonStyle"/>
 
             <Button
                 android:id="@+id/btn_edit_thongtin"
@@ -178,7 +179,8 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="@dimen/margin_large"
                 android:text="Sửa thông tin"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                style="@style/ButtonStyle"/>
         </LinearLayout>
 
     </LinearLayout>

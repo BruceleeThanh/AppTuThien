@@ -5,6 +5,8 @@
     tools:context="com.example.vuduc.apptuthien.CreateRedPontActivity"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingRight="@dimen/margin_small"
+    android:paddingLeft="@dimen/margin_small"
     android:fitsSystemWindows="true">
 
     <LinearLayout
@@ -47,18 +49,15 @@
                 android:textSize="@dimen/txt_large"
                 android:textStyle="bold"/>
 
-            <ScrollView
+            <EditText
+                android:id="@+id/editProjectContent"
                 android:layout_width="match_parent"
-                android:layout_height="150dp">
-
-                <EditText
-                    android:id="@+id/editProjectContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Nhập nội dung"
-                    android:inputType="textMultiLine"
-                    android:ems="10"/>
-            </ScrollView>
+                android:layout_height="150dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/bg_black_white_tv"
+                android:hint="Nhập nội dung dự án"
+                android:gravity="top"
+                android:inputType="textMultiLine"/>
 
         </LinearLayout>
 
@@ -165,7 +164,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Thêm"/>
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="Thêm"
+                style="@style/ButtonStyle"/>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_redpoint_listLocation"
@@ -206,13 +207,17 @@
                 android:id="@+id/btnLuu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lưu"/>
+                android:layout_marginRight="@dimen/margin_medium"
+                android:text="Lưu"
+                style="@style/ButtonStyle"/>
 
             <Button
                 android:id="@+id/Huy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hủy"/>
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:text="Hủy"
+                style="@style/ButtonStyle"/>
         </LinearLayout>
         
     </LinearLayout>
