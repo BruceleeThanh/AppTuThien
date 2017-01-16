@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.vuduc.adapters.ListLinkProjectAdapter;
 import com.example.vuduc.adapters.ListLocationAdapter;
@@ -29,6 +30,9 @@ public class RedpointDetailActivity extends AppCompatActivity {
 
     Button btn_edit_thongtin;
     Button btn_dangky_cuutro;
+
+    //Link trang ca nhan
+    TextView txt_link_user_profile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +74,14 @@ public class RedpointDetailActivity extends AppCompatActivity {
                 startActivity(new Intent(RedpointDetailActivity.this, ListProjectSignupActivity.class));
             }
         });
+
+        //Link den trang ca nhan
+        txt_link_user_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RedpointDetailActivity.this, UserProfileActivity.class));
+            }
+        });
     }
 
     private void LinkProjectData() {
@@ -98,5 +110,8 @@ public class RedpointDetailActivity extends AppCompatActivity {
 
         //Dang ky cuu tro
         btn_dangky_cuutro = (Button) findViewById(R.id.btn_dangky_cuutro);
+
+        //Link den trang ca nhan
+        txt_link_user_profile = (TextView) findViewById(R.id.txt_link_user_profile);
     }
 }

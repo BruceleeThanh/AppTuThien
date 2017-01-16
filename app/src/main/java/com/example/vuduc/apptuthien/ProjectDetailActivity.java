@@ -26,6 +26,9 @@ public class ProjectDetailActivity extends AppCompatActivity {
     ListLinkRedpointAdapter listLinkRedpointAdapter;
     List<RedPoint> redPointList;
 
+    //Link trang ca nhan
+    TextView txt_link_user_profile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +56,14 @@ public class ProjectDetailActivity extends AppCompatActivity {
 
         rv_edit_history.setLayoutManager(new LinearLayoutManager(this));
         rv_edit_history.setAdapter(new ListEditHistoryAdapter(this));
+
+        //Link den trang ca nhan
+        txt_link_user_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProjectDetailActivity.this, UserProfileActivity.class));
+            }
+        });
     }
 
     private void ListRedpointData() {
@@ -67,5 +78,8 @@ public class ProjectDetailActivity extends AppCompatActivity {
         //Danh sach diem nong tai tro
         rv_list_link_redpoint= (RecyclerView) findViewById(R.id.rv_list_link_redpoint);
         rv_edit_history = (RecyclerView) findViewById(R.id.rv_edit_history);
+
+        //Link den trang ca nhan
+        txt_link_user_profile = (TextView) findViewById(R.id.txt_link_user_profile);
     }
 }

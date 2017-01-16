@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.vuduc.adapters.ListLocationAdapter;
 import com.example.vuduc.model.Location;
@@ -21,6 +22,9 @@ public class RedpointCheckDetailActivity extends AppCompatActivity {
     List<Location> locationLists;
 
     Button btn_edit_thongtin;
+
+    //Link trang ca nhan
+    TextView txt_link_user_profile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +50,14 @@ public class RedpointCheckDetailActivity extends AppCompatActivity {
             }
         });
 
+        //Link den trang ca nhan
+        txt_link_user_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RedpointCheckDetailActivity.this, UserProfileActivity.class));
+            }
+        });
+
     }
 
     private void LocationData() {
@@ -62,5 +74,7 @@ public class RedpointCheckDetailActivity extends AppCompatActivity {
         rv_redpoint__detail_listLocation= (RecyclerView) findViewById(R.id.rv_redpoint__detail_listLocation);
         btn_edit_thongtin= (Button) findViewById(R.id.btn_edit_thongtin);
 
+        //Link den trang ca nhan
+        txt_link_user_profile = (TextView) findViewById(R.id.txt_link_user_profile);
     }
 }

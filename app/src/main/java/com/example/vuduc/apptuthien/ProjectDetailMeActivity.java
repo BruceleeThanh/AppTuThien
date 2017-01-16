@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.vuduc.adapters.ListEditHistoryAdapter;
 import com.example.vuduc.adapters.ListLinkRedpointAdapter;
@@ -28,6 +29,8 @@ public class ProjectDetailMeActivity extends AppCompatActivity {
     @BindView(R.id.btn_edit_thongtin)
     Button btn_edit_thongtin;
 
+    @BindView(R.id.txt_link_user_profile)
+    TextView txt_link_user_profile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +67,13 @@ public class ProjectDetailMeActivity extends AppCompatActivity {
             }
         });
 
+        //Link den trang ca nhan
+        txt_link_user_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProjectDetailMeActivity.this, UserProfileActivity.class));
+            }
+        });
     }
 
     private void addEditHistoryList(){

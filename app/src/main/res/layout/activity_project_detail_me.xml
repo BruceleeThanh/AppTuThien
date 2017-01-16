@@ -54,17 +54,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="0">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_weight="1"
                 android:text="Đơn vị tổ chức:"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/txt_link_user_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15sp"
@@ -75,12 +78,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="0">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_weight="1"
                 android:text="Thời gian:"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -97,12 +102,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="0">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_weight="1"
                 android:text="Địa điểm:"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -119,12 +126,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="0">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_weight="1"
                 android:text="Kinh phí dự kiến:"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -141,12 +150,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="0">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_weight="1"
                 android:text="Kinh phí\nđược tài trợ"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -161,6 +172,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15sp"
                     android:layout_marginTop="10dp"
+                    android:layout_gravity="right"
                     android:text="500000000 đồng"
                     android:textSize="18sp"/>
 
@@ -169,6 +181,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15sp"
                     android:layout_marginTop="10dp"
+                    android:layout_gravity="right"
                     android:text="Link sao kê"
                     android:textSize="18sp"/>
             </LinearLayout>
@@ -199,12 +212,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="0">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_weight="1"
                 android:text="Tình trạng dự án:"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
