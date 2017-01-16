@@ -2,9 +2,13 @@ package com.example.vuduc.model;
 
 import java.util.Date;
 
+/**
+ * Created by VuDuc on 1/16/2017.
+ */
 
-public class ProjectTuThien {
+public class VoluntoryProjectHistory {
     private String _id;
+    private String id_project;
     private String title;
     private String content;
     private String creator;
@@ -16,29 +20,25 @@ public class ProjectTuThien {
     private String images;
     private String videos;
     private Date created_at;
-    private Date modefied_at;
+    private Date modified_at;
 
-    public ProjectTuThien(String _id, String content, Date created_at, String creator, String id_category, String id_status, String images, String location, Date modefied_at, float money, Date time, String title, String videos) {
+    public VoluntoryProjectHistory(String _id, String content, Date created_at, String creator, String id_category, String id_project,
+                                   String id_status, String images, String location, Date modified_at, float money, Date time,
+                                   String title, String videos) {
         this._id = _id;
         this.content = content;
         this.created_at = created_at;
         this.creator = creator;
         this.id_category = id_category;
+        this.id_project = id_project;
         this.id_status = id_status;
         this.images = images;
         this.location = location;
-        this.modefied_at = modefied_at;
+        this.modified_at = modified_at;
         this.money = money;
         this.time = time;
         this.title = title;
         this.videos = videos;
-    }
-
-    public ProjectTuThien() {
-    }
-
-    public ProjectTuThien(String title) {
-        this.title = title;
     }
 
     public String get_id() {
@@ -81,6 +81,14 @@ public class ProjectTuThien {
         this.id_category = id_category;
     }
 
+    public String getId_project() {
+        return id_project;
+    }
+
+    public void setId_project(String id_project) {
+        this.id_project = id_project;
+    }
+
     public String getId_status() {
         return id_status;
     }
@@ -105,12 +113,12 @@ public class ProjectTuThien {
         this.location = location;
     }
 
-    public Date getModefied_at() {
-        return modefied_at;
+    public Date getModified_at() {
+        return modified_at;
     }
 
-    public void setModefied_at(Date modefied_at) {
-        this.modefied_at = modefied_at;
+    public void setModified_at(Date modified_at) {
+        this.modified_at = modified_at;
     }
 
     public float getMoney() {

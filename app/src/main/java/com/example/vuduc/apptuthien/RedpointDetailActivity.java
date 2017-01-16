@@ -11,7 +11,7 @@ import android.widget.Button;
 import com.example.vuduc.adapters.ListLinkProjectAdapter;
 import com.example.vuduc.adapters.ListLocationAdapter;
 import com.example.vuduc.model.Location;
-import com.example.vuduc.model.ProjectTuThien;
+import com.example.vuduc.model.VoluntaryProject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ public class RedpointDetailActivity extends AppCompatActivity {
     //Danh sach du an tai tro
     RecyclerView rv_list_link_project;
     ListLinkProjectAdapter listLinkProjectAdapter;
-    List<ProjectTuThien> projectTuThienList;
+    List<VoluntaryProject> voluntaryProjectList;
 
     Button btn_edit_thongtin;
     Button btn_dangky_cuutro;
@@ -58,8 +58,8 @@ public class RedpointDetailActivity extends AppCompatActivity {
         //Chuyen sang du an lien ket
         LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(this);
         rv_list_link_project.setLayoutManager(linearLayoutManager1);
-        projectTuThienList=new ArrayList<>();
-        listLinkProjectAdapter=new ListLinkProjectAdapter(this, projectTuThienList);
+        voluntaryProjectList =new ArrayList<>();
+        listLinkProjectAdapter=new ListLinkProjectAdapter(this, voluntaryProjectList);
         rv_list_link_project.setAdapter(listLinkProjectAdapter);
         LinkProjectData();
 
@@ -73,11 +73,11 @@ public class RedpointDetailActivity extends AppCompatActivity {
     }
 
     private void LinkProjectData() {
-        ProjectTuThien b=new ProjectTuThien("Dự án từ thiện 1");
-        projectTuThienList.add(b);
+        VoluntaryProject b=new VoluntaryProject("Dự án từ thiện 1");
+        voluntaryProjectList.add(b);
 
-        b=new ProjectTuThien("Dự án từ thiện 2");
-        projectTuThienList.add(b);
+        b=new VoluntaryProject("Dự án từ thiện 2");
+        voluntaryProjectList.add(b);
         listLinkProjectAdapter.notifyDataSetChanged();
     }
 

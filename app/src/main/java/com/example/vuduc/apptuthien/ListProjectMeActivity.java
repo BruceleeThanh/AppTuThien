@@ -10,10 +10,11 @@ import android.view.MenuInflater;
 import android.view.View;
 
 import com.example.vuduc.adapters.ListProjectAdapter;
+import com.example.vuduc.adapters.ListProjectMeAdapter;
 
 public class ListProjectMeActivity extends AppCompatActivity {
     RecyclerView rvListProject;
-    ListProjectAdapter lpaAdapter;
+    ListProjectMeAdapter lpmaAdapter;
     com.github.clans.fab.FloatingActionButton fabCreateProject;
 
     @Override
@@ -33,8 +34,8 @@ public class ListProjectMeActivity extends AppCompatActivity {
     private void addEvents(){
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rvListProject.setLayoutManager(linearLayoutManager);
-        lpaAdapter = new ListProjectAdapter(this);
-        rvListProject.setAdapter(lpaAdapter);
+        lpmaAdapter = new ListProjectMeAdapter(this);
+        rvListProject.setAdapter(lpmaAdapter);
 
         //Tao moi project
         fabCreateProject.setOnClickListener(new View.OnClickListener() {

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.example.vuduc.apptuthien.ProjectDetailActivity;
 import com.example.vuduc.apptuthien.R;
-import com.example.vuduc.model.ProjectTuThien;
+import com.example.vuduc.model.VoluntaryProject;
 
 import java.util.List;
 
@@ -20,9 +20,9 @@ import java.util.List;
 
 public class ListLinkProjectAdapter extends RecyclerView.Adapter<ListLinkProjectAdapter.ViewHoder> {
     private Context context;
-    private List<ProjectTuThien> linkProjectList;
+    private List<VoluntaryProject> linkProjectList;
 
-    public ListLinkProjectAdapter(Context context, List<ProjectTuThien> linkProjectList) {
+    public ListLinkProjectAdapter(Context context, List<VoluntaryProject> linkProjectList) {
         this.context = context;
         this.linkProjectList = linkProjectList;
     }
@@ -36,9 +36,9 @@ public class ListLinkProjectAdapter extends RecyclerView.Adapter<ListLinkProject
 
     @Override
     public void onBindViewHolder(ViewHoder holder, int position) {
-        ProjectTuThien projectTuThien = linkProjectList.get(position);
+        VoluntaryProject voluntaryProject = linkProjectList.get(position);
 
-        holder.txt_link_project.setText(projectTuThien.getTitle());
+        holder.txt_link_project.setText(voluntaryProject.getTitle());
         holder.txt_link_project.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -37,7 +37,9 @@
         <activity android:name=".RedpointCheckDetailActivity" />
         <activity android:name=".ListProjectSignupActivity" />
         <activity android:name=".ProjectDetailSignupActivity" />
-        <activity android:name=".ListProjectMeActivity"></activity>
+        <activity android:name=".ListProjectMeActivity" />
+        <activity android:name=".ProjectDetailMeActivity" />
+        <activity android:name=".ProjectDetailHistoryActivity"></activity>
     </application>
 
 </manifest>

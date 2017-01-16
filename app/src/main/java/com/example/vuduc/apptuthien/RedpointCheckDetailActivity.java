@@ -8,10 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.vuduc.adapters.ListLinkProjectAdapter;
 import com.example.vuduc.adapters.ListLocationAdapter;
 import com.example.vuduc.model.Location;
-import com.example.vuduc.model.ProjectTuThien;
 
 import java.util.ArrayList;
 import java.util.List;
