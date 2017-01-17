@@ -8,46 +8,6 @@
     tools:context="com.example.vuduc.apptuthien.UserProfileActivity">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cvProfileBackground"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/ivBackground"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@color/colorPrimaryDark"/>
-
-            <TextView
-                android:id="@+id/tvProfileName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/tvTypeUser"
-                android:layout_marginLeft="@dimen/margin_big"
-                android:text="Hội từ thiện TLU"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/tvTypeUser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/ivBackground"
-                android:layout_marginBottom="@dimen/margin_big"
-                android:layout_marginLeft="@dimen/margin_big"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:text="Hội nhóm từ thiện"
-                android:textColor="@color/white"
-                android:textSize="14sp"/>
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
         android:id="@+id/cvProfilePresent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -179,6 +139,49 @@
                 android:text="Hà Đông, Hà Nội"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/txt_medium"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvProfileBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBackground"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvTypeUser"
+                android:layout_marginLeft="@dimen/margin_big"
+                android:text="Hội từ thiện TLU"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvTypeUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ivBackground"
+                android:layout_marginBottom="@dimen/margin_big"
+                android:layout_marginLeft="@dimen/margin_big"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="Hội nhóm từ thiện"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 

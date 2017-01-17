@@ -203,32 +203,47 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <android.support.design.widget.TextInputLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/editDayStartProject"
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:inputType="date"
                         android:hint="Nhập ngày bắt đầu"
                         android:ems="10"
                         android:layout_weight="1"/>
-                </android.support.design.widget.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/date"
+                        android:id="@+id/btnStartDate" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
                     <EditText
                         android:id="@+id/editDayEndProject"
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:inputType="date"
                         android:hint="Nhập ngày kết thúc"
                         android:ems="10"
                         android:layout_weight="1"/>
-                </android.support.design.widget.TextInputLayout>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/date"
+                        android:id="@+id/btnEndDate" />
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

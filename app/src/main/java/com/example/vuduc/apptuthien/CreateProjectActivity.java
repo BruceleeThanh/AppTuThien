@@ -1,5 +1,6 @@
 package com.example.vuduc.apptuthien;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +11,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.vuduc.adapters.ListLocationAdapter;
 import com.example.vuduc.adapters.ListPickImageAdapter;
@@ -21,7 +25,9 @@ import com.nguyenhoanglam.imagepicker.activity.ImagePicker;
 import com.nguyenhoanglam.imagepicker.activity.ImagePickerActivity;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import id.zelory.compressor.Compressor;
@@ -48,9 +54,6 @@ public class CreateProjectActivity extends AppCompatActivity {
     String city = "", district = "", ward = "";
     private final int PICK_IMAGE_REQUEST = 200;
 
-
-
-
     // Những biến và list bên dưới đây phục vụ cho việc chọn ảnh
     Button btn_chon_anh;
     RecyclerView rv_chon_anh;
@@ -59,6 +62,12 @@ public class CreateProjectActivity extends AppCompatActivity {
     // Vì 2 class trùng tên, nên một thằng phải viết dài như thế này
     private ArrayList<com.nguyenhoanglam.imagepicker.model.Image> chooseImages;
     private List<Image> lstImage;
+
+    //Date picker
+    TextView txtDayStartProject, txtDayEndProject;
+    ImageButton btnStartDate, btnEndDate;
+    Calendar calendar = Calendar.getInstance();
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +112,15 @@ public class CreateProjectActivity extends AppCompatActivity {
         lstImage = new ArrayList<>();
         lpiaAdapter = new ListPickImageAdapter(this, lstImage);
         rv_chon_anh.setAdapter(lpiaAdapter);
+
+        //date picker
+        txtDayStartProject = (TextView) findViewById(R.id.txtDayStartProject);
+        txtDayEndProject = (TextView) findViewById(R.id.txtDayEndProject);
+        btnStartDate = (ImageButton) findViewById(R.id.btnStartDate);
+        btnEndDate = (ImageButton) findViewById(R.id.btnEndDate);
+        txtDayStartProject.setText(sdf.format(calendar.getTime()));
+        txtDayEndProject.setText(sdf.format(calendar.getTime()));
+
     }
 
     private void addEvents() {
@@ -133,6 +151,54 @@ public class CreateProjectActivity extends AppCompatActivity {
                 ImagePickerUtils.showFileChooser(CreateProjectActivity.this, chooseImages, PICK_IMAGE_REQUEST);
             }
         });
+
+        btnStartDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                xuLyStartDay();
+            }
+        });
+        btnEndDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                xyLyEndDay();
+            }
+        });
+    }
+
+    private void xyLyEndDay() {
+        DatePickerDialog.OnDateSetListener callBack=new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+                calendar.set(Calendar.YEAR, i);
+                calendar.set(Calendar.MONTH,i1);
+                calendar.set(Calendar.DAY_OF_MONTH,i2);
+                txtDayEndProject.setText(sdf.format(calendar.getTime()));
+            }
+        };
+        DatePickerDialog dialog=new DatePickerDialog(CreateProjectActivity.this, callBack,
+                calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH));
+        dialog.show();
+
+    }
+
+    private void xuLyStartDay() {
+        DatePickerDialog.OnDateSetListener callBack=new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+                calendar.set(Calendar.YEAR, i);
+                calendar.set(Calendar.MONTH,i1);
+                calendar.set(Calendar.DAY_OF_MONTH,i2);
+                txtDayStartProject.setText(sdf.format(calendar.getTime()));
+            }
+        };
+        DatePickerDialog dialog=new DatePickerDialog(CreateProjectActivity.this, callBack,
+                calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH));
+        dialog.show();
     }
 
     // Sau khi chọn ảnh thì nó sẽ trả về ActivityResult nhé

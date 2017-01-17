@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.vuduc.apptuthien">
+    package="com.example.vuduc.apptuthien">
 
     <application
         android:allowBackup="true"
@@ -11,37 +11,37 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <action android:name="android.intent.action.MAIN"/>
+            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.DEFAULT"/>
+            <category android:name="android.intent.category.DEFAULT" />
         </activity>
         <activity android:name=".LoginActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignupActivity"/>
-        <activity android:name=".ProjectDetailActivity"/>
-        <activity android:name=".ListProjectActivity"/>
-        <activity android:name=".CreateProjectActivity"/>
-        <activity android:name=".CreateRedPontActivity"/>
-        <activity android:name=".ListRedPointActivity"/>
-        <activity android:name=".EditProjectActivity"/>
-        <activity android:name=".EditRedPointActivity"/>
-        <activity android:name=".RedpointDetailActivity"/>
-        <activity android:name=".ListRedpointCheckedActivity"/>
-        <activity android:name=".MoiTaiTroActivity"/>
-        <activity android:name=".XemTaiTroActivity"/>
-        <activity android:name=".RedpointCheckDetailActivity"/>
-        <activity android:name=".ListProjectSignupActivity"/>
-        <activity android:name=".ProjectDetailSignupActivity"/>
-        <activity android:name=".ListProjectMeActivity"/>
-        <activity android:name=".ProjectDetailMeActivity"/>
-        <activity android:name=".ProjectDetailHistoryActivity"/>
-        <activity android:name=".UserProfileActivity">
-        </activity>
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".ProjectDetailActivity" />
+        <activity android:name=".ListProjectActivity" />
+        <activity android:name=".CreateProjectActivity" />
+        <activity android:name=".CreateRedPontActivity" />
+        <activity android:name=".ListRedPointActivity" />
+        <activity android:name=".EditProjectActivity" />
+        <activity android:name=".EditRedPointActivity" />
+        <activity android:name=".RedpointDetailActivity" />
+        <activity android:name=".ListRedpointCheckedActivity" />
+        <activity android:name=".MoiTaiTroActivity" />
+        <activity android:name=".XemTaiTroActivity" />
+        <activity android:name=".RedpointCheckDetailActivity" />
+        <activity android:name=".ListProjectSignupActivity" />
+        <activity android:name=".ProjectDetailSignupActivity" />
+        <activity android:name=".ListProjectMeActivity" />
+        <activity android:name=".ProjectDetailMeActivity" />
+        <activity android:name=".ProjectDetailHistoryActivity" />
+        <activity android:name=".UserProfileActivity"></activity>
+        <activity android:name=".EditUserProfileActivity"></activity>
     </application>
 
 </manifest>

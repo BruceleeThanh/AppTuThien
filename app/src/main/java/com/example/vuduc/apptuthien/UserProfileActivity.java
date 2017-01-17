@@ -1,5 +1,6 @@
 package com.example.vuduc.apptuthien;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -25,7 +26,7 @@ public class UserProfileActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.tb_edit){
-            Toast.makeText(this, "Chinh ngu lắm Chinh ạ", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(UserProfileActivity.this, EditUserProfileActivity.class));
         }
         return true;
     }

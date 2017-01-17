@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class SignupActivity extends AppCompatActivity {
 
-    EditText editEmail, editPhone, editPassword1, editPassword2, editFirstName, editLastName;
+    EditText editEmail, editPhone, editPassword1, editPassword2, editName;
     Button btnSignUp;
     TextView txt_Link_Login;
 
@@ -58,8 +58,7 @@ public class SignupActivity extends AppCompatActivity {
         editPhone= (EditText) findViewById(R.id.edit_Signup_Phone);
         editPassword1= (EditText) findViewById(R.id.edit_Signup_Password1);
         editPassword2= (EditText) findViewById(R.id.edit_Signup_Password2);
-        editFirstName= (EditText) findViewById(R.id.edit_Signup_FirstName);
-        editLastName= (EditText) findViewById(R.id.edit_Signup_LastName);
+        editName= (EditText) findViewById(R.id.edit_Signup_Name);
         btnSignUp= (Button) findViewById(R.id.btn_Signup);
         txt_Link_Login= (TextView) findViewById(R.id.txt_Link_Login);
 
