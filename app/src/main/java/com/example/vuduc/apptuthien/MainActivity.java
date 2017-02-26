@@ -23,7 +23,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.vuduc.adapters.MainMenuAdapter;
+import com.example.vuduc.libs.ApiConstants;
 import com.example.vuduc.model.HomeCard;
+import com.example.vuduc.utils.SharedPref;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
         llUserCover = (LinearLayout) navHeader.findViewById(R.id.llUserCover);
         ivUserAvatar = (ImageView) navHeader.findViewById(R.id.ivUserAvatar);
         tvUserName = (TextView) navHeader.findViewById(R.id.tvUserName);
+        String name = SharedPref.getInstance(this).getString(ApiConstants.KEY_FIRST_NAME, "");
+        tvUserName.setText(name);
         //Setting Navigation View Item Selected Listener to handle the item click of the navigation menu
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             // This method will trigger on item Click of navigation menu
@@ -110,6 +114,12 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.itemProject:
                         startActivity(new Intent(MainActivity.this, ListProjectMeActivity.class));
+                        return true;
+                    case R.id.itemLogout:
+                        SharedPref.getInstance(MainActivity.this).putString(ApiConstants.KEY_TOKEN, "");
+                        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                        finish();
                         return true;
                     default:
                         Toast.makeText(getApplicationContext(), "Somethings Wrong", Toast.LENGTH_SHORT).show();

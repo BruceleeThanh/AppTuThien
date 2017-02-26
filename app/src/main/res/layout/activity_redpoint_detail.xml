@@ -23,11 +23,12 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             app:srcCompat="@drawable/vidu_redpoint1"
-            android:id="@+id/imageView2"
+            android:id="@+id/ivImageRedPoint"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"/>
 
         <TextView
+            android:id="@+id/tvTitleRedPoint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lũ lụt ở Hà Tĩnh"
@@ -36,6 +37,7 @@
             android:layout_marginBottom="10dp"/>
 
         <TextView
+            android:id="@+id/tvContentRedPoint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/viduProject_content"
@@ -91,6 +93,7 @@
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/tvCreatedAtRedPoint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15sp"

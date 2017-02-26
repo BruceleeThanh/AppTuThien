@@ -1,6 +1,7 @@
 package com.example.vuduc.model;
 
 import java.util.Date;
+import java.util.List;
 
 
 public class RedPoint {
@@ -13,7 +14,7 @@ public class RedPoint {
     private float money;
     private String id_category;
     private String id_status;
-    private String images;
+    private List<String> images;
     private String videos;
     private Date happened_at;
     private Date created_at;
@@ -21,6 +22,13 @@ public class RedPoint {
     private boolean checked;
 
     public RedPoint() {
+    }
+
+    public RedPoint(String _id, String title, String content, List<String> images) {
+        this._id = _id;
+        this.title = title;
+        this.content = content;
+        this.images = images;
     }
 
     public RedPoint(String title) {
@@ -91,11 +99,11 @@ public class RedPoint {
         this.id_status = id_status;
     }
 
-    public String getImages() {
+    public List<String> getImages() {
         return images;
     }
 
-    public void setImages(String images) {
+    public void setImages(List<String> images) {
         this.images = images;
     }
 

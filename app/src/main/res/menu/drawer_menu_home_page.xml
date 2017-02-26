@@ -19,7 +19,7 @@
         android:id="@+id/groupAction"
         android:checkableBehavior="single">
             <item
-                android:id="@+id/itemSetting"
+                android:id="@+id/itemLogout"
                 android:title="Đăng xuất" />
     </group>
 </menu>

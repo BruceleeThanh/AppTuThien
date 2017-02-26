@@ -168,19 +168,27 @@
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btn_redpoint_them"
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_big">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:text="Thêm"
-                style="@style/ButtonStyle"/>
+                android:text="Danh mục: "
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_redpoint_listLocation"
+            <Spinner
+                android:id="@+id/spinner_redpoint_category"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content">
+
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -257,7 +265,7 @@
                 style="@style/ButtonStyle"/>
 
             <Button
-                android:id="@+id/Huy"
+                android:id="@+id/btnHuy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_medium"
