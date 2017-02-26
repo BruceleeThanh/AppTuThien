@@ -23,11 +23,12 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         app:srcCompat="@drawable/vidu_project1"
-        android:id="@+id/imageView2"
+        android:id="@+id/img_project_title"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"/>
 
     <TextView
+        android:id="@+id/txt_project_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/viduProject_title"
@@ -36,6 +37,7 @@
         android:layout_marginBottom="10dp"/>
     
     <TextView
+        android:id="@+id/txt_project_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/viduProject_content"
@@ -92,6 +94,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:id="@+id/txt_project_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
@@ -116,6 +119,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:id="@+id/txt_project_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
@@ -140,6 +144,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:id="@+id/txt_project_money_duKien"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
@@ -169,6 +174,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/txt_project_money_thucTe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15sp"
@@ -177,6 +183,7 @@
                 android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/txt_project_linkSaoKe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15sp"
@@ -224,6 +231,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:id="@+id/txt_project_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -251,7 +259,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/vidu_project2"
-            android:id="@+id/imageView3" />
+            android:id="@+id/img_project_content" />
 
 
     </LinearLayout>
