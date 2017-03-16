@@ -1,24 +1,62 @@
 package com.example.vuduc.model;
 
 import java.util.Date;
+import java.util.List;
 
 
 public class VoluntaryProject {
     private String _id;
     private String title;
     private String content;
-    private String creator;
+    private User creator;
     private String location;
     private Date time;
-    private float money;
+    private String money;
     private String id_category;
     private String id_status;
-    private String images;
+    private List<String> images;
     private String videos;
     private Date created_at;
     private Date modified_at;
 
-    public VoluntaryProject(String _id, String content, Date created_at, String creator, String id_category, String id_status, String images, String location, Date modified_at, float money, Date time, String title, String videos) {
+    public VoluntaryProject(String _id, String title, String content, List<String> images) {
+        this._id = _id;
+        this.title = title;
+        this.content = content;
+        this.images = images;
+    }
+
+    public VoluntaryProject(String _id, Date created_at, String title, String content, List<String> images, String location, 
+                            String id_category, String id_status, String  money, User creator) {
+        this._id = _id;
+        this.created_at = created_at;
+        this.title = title;
+        this.content = content;
+        this.images = images;
+        this.location = location;
+        this.id_category = id_category;
+        this.id_status = id_status;
+        this.money = money;
+        this.creator = creator;
+    }
+
+    public VoluntaryProject(String _id, String title, String content, User creator, String location, Date time, String  money, String id_category, String id_status, List<String> images, String videos, Date created_at, Date modified_at) {
+        this._id = _id;
+        this.title = title;
+        this.content = content;
+        this.creator = creator;
+        this.location = location;
+        this.time = time;
+        this.money = money;
+        this.id_category = id_category;
+        this.id_status = id_status;
+        this.images = images;
+        this.videos = videos;
+        this.created_at = created_at;
+        this.modified_at = modified_at;
+    }
+
+    public VoluntaryProject(String _id, String content, Date created_at, User creator, String id_category, String id_status, List<String> images, String location, Date modified_at, String money, Date time, String title, String videos) {
         this._id = _id;
         this.content = content;
         this.created_at = created_at;
@@ -65,11 +103,11 @@ public class VoluntaryProject {
         this.created_at = created_at;
     }
 
-    public String getCreator() {
+    public User getCreator() {
         return creator;
     }
 
-    public void setCreator(String creator) {
+    public void setCreator(User creator) {
         this.creator = creator;
     }
 
@@ -89,11 +127,11 @@ public class VoluntaryProject {
         this.id_status = id_status;
     }
 
-    public String getImages() {
+    public List<String> getImages() {
         return images;
     }
 
-    public void setImages(String images) {
+    public void setImages(List<String> images) {
         this.images = images;
     }
 
@@ -113,11 +151,11 @@ public class VoluntaryProject {
         this.modified_at = modified_at;
     }
 
-    public float getMoney() {
+    public String getMoney() {
         return money;
     }
 
-    public void setMoney(float money) {
+    public void setMoney(String money) {
         this.money = money;
     }
 

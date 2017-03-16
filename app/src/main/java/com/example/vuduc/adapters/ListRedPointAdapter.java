@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.vuduc.apptuthien.R;
 import com.example.vuduc.apptuthien.RedpointDetailActivity;
 import com.example.vuduc.helpers.PicassoHelper;
+import com.example.vuduc.libs.ApiConstants;
 import com.example.vuduc.model.RedPoint;
 
 import java.util.List;
@@ -28,7 +29,7 @@ public class ListRedPointAdapter extends RecyclerView.Adapter<ListRedPointAdapte
 
     public ListRedPointAdapter(Context context, List<RedPoint> lstRedPoint) {
         this.context = context;
-        this.lstRedPoint=lstRedPoint;
+        this.lstRedPoint = lstRedPoint;
     }
 
     @Override
@@ -40,16 +41,19 @@ public class ListRedPointAdapter extends RecyclerView.Adapter<ListRedPointAdapte
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        RedPoint redPoint = lstRedPoint.get(position);
+        final RedPoint redPoint = lstRedPoint.get(position);
         holder.cvRedPoint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context, RedpointDetailActivity.class));
+                Intent intent = new Intent(context, RedpointDetailActivity.class);
+                intent.putExtra(ApiConstants.KEY_ID, redPoint.get_id());
+                context.startActivity(intent);
             }
         });
         holder.tvProjectName.setText(redPoint.getTitle());
         holder.txtProjectDescription.setText(redPoint.getContent());
-        PicassoHelper.execPicasso(context, redPoint.getImages().get(0), holder.ivProjectImage);
+        if (!(redPoint.getImages().isEmpty() || redPoint.getImages() == null))
+            PicassoHelper.execPicasso(context, redPoint.getImages().get(0), holder.ivProjectImage);
     }
 
     @Override

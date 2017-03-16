@@ -25,6 +25,10 @@ public class ApiConstants {
     public static final String API_CATEGORY_BROWSE = "category/browse";
     public static final String API_VOLUNTARY_SPOT_CREATE = "voluntary_spot/create";
     public static final String API_VOLUNTARY_SPOT_BROWSE = "voluntary_spot/browse";
+    public static final String API_VOLUNTARY_SPOT_GET = "voluntary_spot/get";
+    public static final String API_VOLUNTARY_PROJECT_CREATE = "voluntary_project/create";
+    public static final String API_VOLUNTARY_PROJECT_BROWSE = "voluntary_project/browse";
+    public static final String API_VOLUNTARY_PROJECT_GET = "voluntary_project/get";
 
 
     // Default params
@@ -54,6 +58,15 @@ public class ApiConstants {
     public static final String KEY_HAPPENED_AT = "happened_at";
     public static final String KEY_IMAGES = "images";
     public static final String KEY_VIDEOS = "videos";
+    public static final String KEY_CREATOR = "creator";
+    public static final String KEY_AVATAR = "avatar";
+    public static final String KEY_CREATED_AT = "created_at";
+    public static final String KEY_MODIFIED_AT = "modified_at";
+    public static final String KEY_VERIFICATION_STATUS = "verification_status";
+    public static final String KEY_MONEY = "money";
+    public static final String KEY_DONATE = "donate";
+    public static final String KEY_STARTING_TIME = "starting_time";
+    public static final String KEY_FINISH_TIME = "finish_time";
 
 
     public ApiConstants() {

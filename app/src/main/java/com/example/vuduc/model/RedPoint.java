@@ -8,9 +8,8 @@ public class RedPoint {
     private String _id;
     private String title;
     private String content;
-    private String creator;
+    private User creator;
     private String location;
-    private Date time;
     private float money;
     private String id_category;
     private String id_status;
@@ -18,10 +17,29 @@ public class RedPoint {
     private String videos;
     private Date happened_at;
     private Date created_at;
-    private Date modefied_at;
+    private Date modified_at;
     private boolean checked;
 
     public RedPoint() {
+    }
+
+    public RedPoint(String _id, String title, String content, User creator, String location, float money,
+                    String id_category, String id_status, List<String> images, String videos, Date happened_at, Date created_at,
+                    Date modified_at, boolean checked) {
+        this._id = _id;
+        this.title = title;
+        this.content = content;
+        this.creator = creator;
+        this.location = location;
+        this.money = money;
+        this.id_category = id_category;
+        this.id_status = id_status;
+        this.images = images;
+        this.videos = videos;
+        this.happened_at = happened_at;
+        this.created_at = created_at;
+        this.modified_at = modified_at;
+        this.checked = checked;
     }
 
     public RedPoint(String _id, String title, String content, List<String> images) {
@@ -67,11 +85,11 @@ public class RedPoint {
         this.created_at = created_at;
     }
 
-    public String getCreator() {
+    public User getCreator() {
         return creator;
     }
 
-    public void setCreator(String creator) {
+    public void setCreator(User creator) {
         this.creator = creator;
     }
 
@@ -115,12 +133,12 @@ public class RedPoint {
         this.location = location;
     }
 
-    public Date getModefied_at() {
-        return modefied_at;
+    public Date getModified_at() {
+        return modified_at;
     }
 
-    public void setModefied_at(Date modefied_at) {
-        this.modefied_at = modefied_at;
+    public void setModified_at(Date modified_at) {
+        this.modified_at = modified_at;
     }
 
     public float getMoney() {
@@ -129,14 +147,6 @@ public class RedPoint {
 
     public void setMoney(float money) {
         this.money = money;
-    }
-
-    public Date getTime() {
-        return time;
-    }
-
-    public void setTime(Date time) {
-        this.time = time;
     }
 
     public String getTitle() {

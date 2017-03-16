@@ -275,10 +275,10 @@ public class CreateRedPontActivity extends AppCompatActivity {
                         return params;
                     }
                 };
-//                multipartRequest.setRetryPolicy(new DefaultRetryPolicy(
-//                        DefaultRetryPolicy.DEFAULT_TIMEOUT_MS,
-//                        0,
-//                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                multipartRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        DefaultRetryPolicy.DEFAULT_TIMEOUT_MS,
+                        0,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                 MySingleton.getInstance(CreateRedPontActivity.this).addToRequestQueue(multipartRequest, false);
             }
         }

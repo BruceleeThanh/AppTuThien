@@ -66,43 +66,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_big"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Loại dự án: "
-                android:textSize="@dimen/txt_large"
-                android:textStyle="bold"/>
-
-            <RadioGroup
-                android:id="@+id/radioGroupKindOfProject"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/radioBtnLong"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Dài hạn"/>
-
-                <RadioButton
-                    android:id="@+id/radioBtnShoft"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_medium"
-                    android:layout_weight="1"
-                    android:text="Ngắn hạn"/>
-            </RadioGroup>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_big"
             android:orientation="vertical">
 
             <TextView
@@ -167,20 +130,27 @@
                 </Spinner>
 
             </LinearLayout>
+        </LinearLayout>
 
-            <Button
-                android:id="@+id/btn_project_them"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_big">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:text="Thêm"
-                style="@style/ButtonStyle"/>
+                android:text="Danh mục: "
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_project_listLocation"
+            <Spinner
+                android:id="@+id/spinner_project_category"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content">
+
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -319,8 +289,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="Sao kê (nếu có)"
-                        android:inputType="numberDecimal"/>
+                        android:hint="Sao kê (nếu có)"/>
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
@@ -340,7 +309,7 @@
                 android:textStyle="bold"/>
 
             <Spinner
-                android:id="@+id/spinner_project_startus"
+                android:id="@+id/spinner_project_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></Spinner>
         </LinearLayout>
@@ -402,7 +371,7 @@
                 style="@style/ButtonStyle"/>
 
             <Button
-                android:id="@+id/Huy"
+                android:id="@+id/btnHuy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_medium"

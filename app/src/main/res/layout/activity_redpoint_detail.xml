@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:fitsSystemWindows="true"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.vuduc.apptuthien.RedpointDetailActivity"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context="com.example.vuduc.apptuthien.RedpointDetailActivity">
 
     <LinearLayout
         android:id="@+id/activity_project_detail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:orientation="vertical">
+        android:paddingTop="@dimen/activity_vertical_margin">
 
 
         <ImageView
+            android:id="@+id/ivImageRedPoint"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            app:srcCompat="@drawable/vidu_redpoint1"
-            android:id="@+id/ivImageRedPoint"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/vidu_redpoint1"/>
 
         <TextView
             android:id="@+id/tvTitleRedPoint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:text="Lũ lụt ở Hà Tĩnh"
             android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp"/>
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/tvContentRedPoint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/viduProject_content"
-            android:inputType="textMultiLine"
             android:clickable="false"
+            android:inputType="textMultiLine"
+            android:text="@string/viduProject_content"
             android:textSize="14sp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="1sp"
-            android:background="@android:color/background_dark"
+            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
+            android:background="@android:color/background_dark"
+            android:textSize="1sp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="0">
+            android:layout_weight="0"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/txt_link_user_profile"
+                android:id="@+id/tvCreatorRedPoint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15sp"
@@ -115,12 +115,10 @@
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_redpoint__detail_listLocation"
+            <TextView
+                android:id="@+id/tvLocationRedPoint"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </android.support.v7.widget.RecyclerView>
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
         <LinearLayout
@@ -137,6 +135,7 @@
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/tvStatusRedPoint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15sp"
@@ -179,13 +178,10 @@
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
-            <ImageView
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvImagesRedPoint"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/vidu_redpoint1"
-                android:id="@+id/imageView3" />
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
@@ -196,22 +192,22 @@
 
             <Button
                 android:id="@+id/btn_dangky_cuutro"
+                style="@style/ButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Đăng ký cứu trợ"
-                android:textSize="18sp"
-                style="@style/ButtonStyle"/>
+                android:textSize="18sp"/>
 
             <Button
                 android:id="@+id/btn_edit_thongtin"
+                style="@style/ButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginTop="10dp"
                 android:text="Sửa thông tin"
-                android:textSize="18sp"
-                style="@style/ButtonStyle"/>
+                android:textSize="18sp"/>
         </LinearLayout>
 
     </LinearLayout>
